@@ -15,7 +15,7 @@ Topiknya campuran sejarah dan budaya Tiongkok serta teknologi masa kini: AI dan 
 
 ## Cara upload ke GitHub dan menjadikannya website (GitHub Pages)
 1. Buat repositori baru di GitHub, misalnya `hsk-reader` (pilih **Public**).
-2. Klik **Add file → Upload files**, lalu seret **seluruh isi** folder ini (termasuk folder `assets/` dan `data/`, serta file `.nojekyll`). Klik **Commit changes**.
+2. Klik **Add file → Upload files**, lalu seret **seluruh file** di folder ini. Klik **Commit changes**.
 3. Buka **Settings → Pages**. Di bagian *Source* pilih **Deploy from a branch**, branch **main**, folder **/ (root)**, lalu **Save**.
 4. Tunggu 1–2 menit. Website akan aktif di `https://<username>.github.io/hsk-reader/`.
 
@@ -23,16 +23,16 @@ Topiknya campuran sejarah dan budaya Tiongkok serta teknologi masa kini: AI dan 
 - Pinyin dibuat di browser dengan pustaka [pinyin-pro](https://github.com/zh-lx/pinyin-pro) (dimuat dari CDN jsDelivr). Sesekali nada untuk karakter berbunyi ganda (多音字) bisa kurang tepat.
 - Terjemahan selain tabel kosakata memakai layanan terjemahan mesin online (endpoint publik Google Translate, cadangannya MyMemory). Fitur ini butuh internet, hasilnya tidak selalu sempurna, dan teks yang diketuk/diblok dikirim ke layanan tersebut.
 - Pemisahan kata memakai `Intl.Segmenter` bawaan browser (Chrome, Edge, Safari, dan Firefox versi baru).
-- Untuk menambah atau mengubah teks, edit file di folder `data/`. Format tiap teks: `t` (judul), `id` (topik dalam bahasa Indonesia), `p` (isi; paragraf dipisah baris kosong), `v` (kosakata: `[kata, pinyin, arti]`), `q` (pertanyaan).
+- Untuk menambah atau mengubah teks, edit file `texts-1.js`, `texts-2.js`, atau `texts-3.js`. Format tiap teks: `t` (judul), `id` (topik dalam bahasa Indonesia), `p` (isi; paragraf dipisah baris kosong), `v` (kosakata: `[kata, pinyin, arti]`), `q` (pertanyaan).
 
 ## Struktur
 ```
 index.html          halaman utama + pembaca
 cetak.html          versi cetak (untuk membuat PDF)
-assets/style.css
-assets/app.js
-data/texts-1.js     hari 1–20
-data/texts-2.js     hari 21–36
-data/texts-3.js     hari 37–50
+style.css
+app.js
+texts-1.js     hari 1–20
+texts-2.js     hari 21–36
+texts-3.js     hari 37–50
 Bacaan_Mandarin_HSK8-9_50_Hari.pdf
 ```
