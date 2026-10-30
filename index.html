@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>50 Hari Membaca Mandarin · HSK 8–9</title>
+<meta name="description" content="50 teks bacaan Mandarin faktual tingkat HSK 8–9. Ketuk kata atau blok teks untuk melihat pinyin dan terjemahan bahasa Indonesia.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="bar">
+  <a href="#/" class="brand">五十天中文精读</a>
+  <div class="tools">
+    <button id="btnPinyin" title="Tampilkan pinyin di atas semua karakter">拼音</button>
+    <button id="btnSmaller" title="Perkecil huruf">A−</button>
+    <button id="btnBigger" title="Perbesar huruf">A+</button>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<div id="pop" class="pop" hidden>
+  <button class="pop-x" id="popClose" aria-label="Tutup">×</button>
+  <div class="pop-word" id="popWord"></div>
+  <div class="pop-py" id="popPy"></div>
+  <div class="pop-tr" id="popTr"></div>
+  <div class="pop-sent" id="popSent" hidden></div>
+  <div class="pop-actions">
+    <button id="popSpeak">🔊 Dengarkan</button>
+    <button id="popSentence">Terjemahkan kalimat</button>
+    <a id="popGoogle" target="_blank" rel="noopener">Buka di Google Translate ↗</a>
+  </div>
+</div>
+
+<script src="data/texts-1.js"></script>
+<script src="data/texts-2.js"></script>
+<script src="data/texts-3.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pinyin-pro@3.26.0/dist/index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
